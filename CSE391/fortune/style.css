@@ -1,0 +1,200 @@
+/* Remove default spacing from the webpage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the footer stay at the bottom */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Page heading */
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.page-nav {
+    text-align: center;
+    margin: 14px 0 0;
+}
+
+.page-nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #263238;
+    color: #ffffff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+.page-nav a:hover {
+    opacity: 0.92;
+}
+
+/* Main section fills the available space */
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding: 40px 20px;
+}
+
+/* Fortune box and buttons stay beside each other */
+.fortune-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+/* Fortune message box */
+#fortuneBox {
+    max-width: 650px;
+    min-width: 300px;
+
+    padding: 22px 28px;
+
+    text-align: center;
+
+    color: #b71c1c;
+    background-color: #fff59d;
+
+    border: 4px solid #689f38;
+    border-radius: 5px;
+
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+
+    transition: all 0.3s ease;
+}
+
+/* Container for the four buttons */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 45px);
+    gap: 8px;
+}
+
+.theme-button {
+    width: 45px;
+    height: 45px;
+
+    border: 4px solid white;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.2s ease;
+}
+
+.theme-button:hover {
+    transform: scale(1.1);
+}
+
+/* Button preview colors */
+
+.theme-1 {
+    background-color: #7cb342;
+}
+
+.theme-2 {
+    background-color: #ffc107;
+    color: #222;
+}
+
+.theme-3 {
+    background-color: #5b9bd5;
+}
+
+.theme-4 {
+    background-color: #ed7d31;
+}
+
+/* General button design */
+.control-button {
+    width: 45px;
+    height: 45px;
+
+    border: 4px solid white;
+    border-radius: 6px;
+
+    font-size: 0;
+    cursor: pointer;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.2s ease;
+}
+
+/* Button hover effect */
+.control-button:hover {
+    transform: scale(1.1);
+}
+
+/* Different button colors */
+.green-button {
+    background-color: #7cb342;
+}
+
+.yellow-button {
+    background-color: #ffc107;
+}
+
+.blue-button {
+    background-color: #5b9bd5;
+}
+
+.orange-button {
+    background-color: #ed7d31;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 15px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    .fortune-section {
+        flex-direction: column;
+    }
+
+    #fortuneBox {
+        min-width: 250px;
+        font-size: 17px;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(4, 45px);
+    }
+}

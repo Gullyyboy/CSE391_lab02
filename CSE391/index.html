@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE391 lab2</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top, #f8fafc 0%, #e2e8f0 55%, #cbd5e1 100%);
+            color: #111827;
+        }
+        .card {
+            width: min(640px, calc(100vw - 32px));
+            padding: 36px 32px;
+            border-radius: 28px;
+            background: #ffffff;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: clamp(2rem, 2.4vw, 2.8rem);
+        }
+        p {
+            margin: 0 0 30px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        .project-list {
+            display: grid;
+            gap: 16px;
+        }
+        .project-link {
+            display: block;
+            padding: 18px 22px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #111827;
+            background: #f8fafc;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            font-weight: 700;
+        }
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(148, 163, 184, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>CSE391 Project Collection</h1>
+        <p>Explore the three interactive web apps built for this assignment.</p>
+        <div class="project-list">
+            <a class="project-link" href="fortune/index.html">Fortune Generator</a>
+            <a class="project-link" href="stopwatch/index.html">Stopwatch</a>
+            <a class="project-link" href="todolist/index.html">To-Do List</a>
+        </div>
+    </div>
+</body>
+</html>

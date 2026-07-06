@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #ffffff 0%, #f6f7fb 45%, #eef1f8 100%);
+    color: #111827;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.18), transparent 12%),
+                radial-gradient(circle at 80% 30%, rgba(16, 185, 129, 0.14), transparent 15%),
+                linear-gradient(135deg, rgba(148, 163, 184, 0.08), transparent 50%);
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(420px, calc(100vw - 32px));
+    padding: 36px 28px 32px;
+    border-radius: 32px;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 20px 80px rgba(15, 23, 42, 0.35);
+    text-align: center;
+}
+
+.page-nav {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.page-nav a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.18);
+}
+
+.page-nav a:hover {
+    opacity: 0.92;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2rem, 2.4vw, 2.4rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+#display {
+    position: relative;
+    font-size: 4rem;
+    line-height: 1;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 0.1em;
+    padding: 36px 0 32px;
+    margin: 0 auto 24px;
+    width: 260px;
+    border-radius: 100px;
+    background: radial-gradient(circle at 50% 10%, rgba(96, 165, 250, 0.2), transparent 28%),
+                linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    box-shadow: inset 0 0 40px rgba(96, 165, 250, 0.05), 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+#display::after {
+    content: "A.I. pulse";
+    position: absolute;
+    bottom: 12px;
+    inset-inline: 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+button {
+    min-width: 108px;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 22px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    opacity: 0.95;
+}
+
+#start-btn {
+    background: linear-gradient(135deg, #22c55e, #10b981);
+    box-shadow: 0 14px 28px rgba(16, 185, 129, 0.25);
+}
+
+#stop-btn {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    box-shadow: 0 14px 28px rgba(14, 165, 233, 0.2);
+}
+
+#reset-btn {
+    background: linear-gradient(135deg, #f97316, #fb923c);
+    box-shadow: 0 14px 28px rgba(251, 146, 60, 0.22);
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 400px) {
+    #display {
+        width: 100%;
+        font-size: 3.2rem;
+        padding: 28px 0 24px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

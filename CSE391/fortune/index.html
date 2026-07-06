@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fortune Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-nav"><a href="../index.html">All Projects</a></div>
+
+    <header>
+        <h1>Fortune Generator</h1>
+        <p>Refresh the page to receive a new fortune.</p>
+    </header>
+
+    <main>
+        <div class="fortune-section">
+
+            <!-- The random fortune will be displayed here -->
+            <div id="fortuneBox">
+                <p id="fortuneText">Your fortune will appear here.</p>
+            </div>
+
+            <!-- Four appearance-changing buttons -->
+            <div class="button-container">
+                <button class="theme-button theme-1" data-theme="0" title="Green Theme">
+                    1
+                </button>
+
+                <button class="theme-button theme-2" data-theme="1" title="Yellow Theme">
+                    2
+                </button>
+
+                <button class="theme-button theme-3" data-theme="2" title="Blue Theme">
+                    3
+                </button>
+
+                <button class="theme-button theme-4" data-theme="3" title="Orange Theme">
+                    4
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fortune Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
